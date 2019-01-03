@@ -63,4 +63,10 @@ test('createFizzBuzzData returns correct length', t => {
 	values.forEach(val => {
 		t.is(FizzBuzz.createFizzBuzzData(val).length, val, `createFizzBuzzData failed with value of ${val}`);
 	});
+});
+
+test('createFizzBuzzData returns correct data', t => {
+	const data = FizzBuzz.createFizzBuzzData(100);
+
+	t.is(data[0], '1', 'createFizzBuzzData failed to create the value of "1"');
 })
