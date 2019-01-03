@@ -17,7 +17,7 @@ const determineString = (val) => {
 	if (isDivisibleByThree(val)) {
 		return 'fizz';
 	}
-	if(isDivisibleByFive) {
+	if(isDivisibleByFive(val)) {
 		return 'buzz';
 	}
 	return val.toString();
@@ -26,7 +26,7 @@ const determineString = (val) => {
 const createFizzBuzzData = (val) => {
 	const data = [];
 	for (i = 1; i <= val; i++) {
-		data.push('1');
+		data.push(determineString(i));
 	}
 	return data;
 }
