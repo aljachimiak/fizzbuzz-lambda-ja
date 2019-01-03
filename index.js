@@ -26,7 +26,7 @@ const determineString = (val) => {
 const createFizzBuzzData = (val) => {
 	const data = [];
 	for (i = 1; i <= val; i++) {
-		data.push('poop');
+		data.push('1');
 	}
 	return data;
 }
