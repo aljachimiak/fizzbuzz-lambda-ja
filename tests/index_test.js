@@ -39,4 +39,12 @@ test('determineString returns a string', t => {
 
 test('determineString with should return "fizzbuzz"', t => {
 	t.is(FizzBuzz.determineString(15), 'fizzbuzz', 'determineString with value of 15 did not return "fizzbuzz"');
-})
+});
+
+test('determineString with should return "fizz"', t => {
+	const values = [3, 6, 9, 12];
+
+	values.forEach(val => {
+		t.is(FizzBuzz.determineString(val), 'fizz', `determineString with value of ${val} did not return "fizz"`);
+	});
+});
