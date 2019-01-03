@@ -32,3 +32,7 @@ test('IsDivisibleByFive function returns false', t => {
 		t.is(FizzBuzz.isDivisibleByFive(val), false, `isDivisibleByFive failed with value ${val}`);
 	});
 });
+
+test('determineString returns a string', t => {
+	t.is(typeof FizzBuzz.determineString(1), 'string', 'determineString did not return a string');
+});
