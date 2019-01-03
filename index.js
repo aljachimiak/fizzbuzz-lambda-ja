@@ -23,6 +23,15 @@ const determineString = (val) => {
 	return val.toString();
 }
 
+const createFizzBuzzData = (val) => {
+	const data = [];
+	for (i = 1; i <= val; i++) {
+		data.push('poop');
+	}
+	return data;
+}
+
 FizzBuzz.isDivisibleByThree = isDivisibleByThree;
 FizzBuzz.isDivisibleByFive  = isDivisibleByFive;
 FizzBuzz.determineString = determineString;
+FizzBuzz.createFizzBuzzData = createFizzBuzzData;
