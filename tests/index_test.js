@@ -36,3 +36,7 @@ test('IsDivisibleByFive function returns false', t => {
 test('determineString returns a string', t => {
 	t.is(typeof FizzBuzz.determineString(1), 'string', 'determineString did not return a string');
 });
+
+test('determineString with should return "fizzbuzz"', t => {
+	t.is(FizzBuzz.determineString(15), 'fizzbuzz', 'determineString with value of 15 did not return "fizzbuzz"');
+})
