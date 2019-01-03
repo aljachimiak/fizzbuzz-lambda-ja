@@ -68,8 +68,6 @@ test('createFizzBuzzData returns correct length', t => {
 test('createFizzBuzzData returns correct data', t => {
 	const data = FizzBuzz.createFizzBuzzData(100);
 
-	console.log(data);
-
 	t.is(data[0], '1', 'createFizzBuzzData failed to create the value of "1"');
 
 	t.is(data[1], '2', 'createFizzBuzzData failed to create the value of "2"');
@@ -79,4 +77,4 @@ test('createFizzBuzzData returns correct data', t => {
 	t.is(data[4], 'buzz', 'createFizzBuzzData failed to create the value of "buzz"');
 
 	t.is(data[14], 'fizzbuzz', 'createFizzBuzzData failed to create the value of "fizzbuzz"');
-})
+});
