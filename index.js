@@ -1,37 +1,3 @@
-function FizzBuzz() {}
+const FizzBuzz = require('./fizzbuzz');
 
-module.exports = FizzBuzz;
-
-const isDivisibleByThree = (val) => {
-	return (val % 3) === 0;
-}
-
-const isDivisibleByFive = (val) => {
-	return (val % 5) === 0;
-}
-
-const determineString = (val) => {
-	if (isDivisibleByFive(val) && isDivisibleByThree(val)) {
-		return 'fizzbuzz';
-	}
-	if (isDivisibleByThree(val)) {
-		return 'fizz';
-	}
-	if(isDivisibleByFive(val)) {
-		return 'buzz';
-	}
-	return val.toString();
-}
-
-const createFizzBuzzData = (val) => {
-	const data = [];
-	for (i = 1; i <= val; i++) {
-		data.push(determineString(i));
-	}
-	return data;
-}
-
-FizzBuzz.isDivisibleByThree = isDivisibleByThree;
-FizzBuzz.isDivisibleByFive  = isDivisibleByFive;
-FizzBuzz.determineString = determineString;
-FizzBuzz.createFizzBuzzData = createFizzBuzzData;
+console.log(FizzBuzz.createFizzBuzzData(100));
