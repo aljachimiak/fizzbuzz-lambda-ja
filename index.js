@@ -9,3 +9,7 @@ FizzBuzz.isDivisibleByThree = (val) => {
 FizzBuzz.isDivisibleByFive = (val) => {
 	return (val % 5) === 0;
 }
+
+FizzBuzz.determineString = (val) => {
+	return val.toString();
+}
