@@ -1,5 +1,5 @@
 import test from 'ava';
-import FizzBuzz from '../index';
+import FizzBuzz from '../fizzbuzz';
 
 test('IsDivisibleByThree function returns true', t => {
 	const values = [3, 6, 9];
@@ -67,6 +67,8 @@ test('createFizzBuzzData returns correct length', t => {
 
 test('createFizzBuzzData returns correct data', t => {
 	const data = FizzBuzz.createFizzBuzzData(100);
+
+	console.log(data);
 
 	t.is(data[0], '1', 'createFizzBuzzData failed to create the value of "1"');
 
