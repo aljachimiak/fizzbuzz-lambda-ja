@@ -56,3 +56,11 @@ test('determineString with should return "buzz"', t => {
 		t.is(FizzBuzz.determineString(val), 'buzz', `determineString with value of ${val} did not return "buzz"`);
 	});
 });
+
+test('createFizzBuzzData returns correct length', t => {
+	const values = [10, 100, 1000];
+
+	values.forEach(val => {
+		t.is(FizzBuzz.createFizzBuzzData(val).length, val, `createFizzBuzzData failed with value of ${val}`);
+	});
+})
