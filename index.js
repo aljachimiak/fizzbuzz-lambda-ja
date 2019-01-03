@@ -2,14 +2,21 @@ function FizzBuzz() {}
 
 module.exports = FizzBuzz;
 
-FizzBuzz.isDivisibleByThree = (val) => {
+const isDivisibleByThree = (val) => {
 	return (val % 3) === 0;
 }
 
-FizzBuzz.isDivisibleByFive = (val) => {
+const isDivisibleByFive = (val) => {
 	return (val % 5) === 0;
 }
 
-FizzBuzz.determineString = (val) => {
+const determineString = (val) => {
+	if (isDivisibleByFive(val) && isDivisibleByThree(val)) {
+		return 'fizzbuzz';
+	}
 	return val.toString();
 }
+
+FizzBuzz.isDivisibleByThree = isDivisibleByThree;
+FizzBuzz.isDivisibleByFive  = isDivisibleByFive;
+FizzBuzz.determineString = determineString;
