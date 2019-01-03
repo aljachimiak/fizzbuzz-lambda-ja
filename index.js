@@ -14,6 +14,9 @@ const determineString = (val) => {
 	if (isDivisibleByFive(val) && isDivisibleByThree(val)) {
 		return 'fizzbuzz';
 	}
+	if (isDivisibleByThree(val)) {
+		return 'fizz';
+	}
 	return val.toString();
 }
 
