@@ -9,7 +9,8 @@ exports.handler = async (event) => {
 	const returnObj = {
 		data,
 		number,
-		qsParam
+		qsParam,
+		lang: 'js'
 	};
 	const response = {
 		statusCode: 200,
