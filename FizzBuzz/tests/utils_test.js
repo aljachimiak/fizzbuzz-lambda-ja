@@ -20,3 +20,10 @@ test('determineNumber returns max with too large value for number in query', t =
 test('determineNumber returns min with too small value for number in query', t => {
 	t.is(Utils.determineNumber({number: '-1'}), 1, 'determineNumber doesnt return min value for too small number in queryString');
 });
+
+test('determineNumber returns proper value when an int is passed in', t => {
+	const values = [1, 10, 100, 1000, 10000];
+	values.forEach(val => {
+		t.is(Utils.determineNumber({number: val.toString()}), val, `determineNumber failed to return vaule ${val}`);
+	});
+});
