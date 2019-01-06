@@ -1,7 +1,5 @@
 const FizzBuzz = require('./fizzbuzz');
 
-console.log(FizzBuzz.createFizzBuzzData(100));
-
 exports.handler = async (event) => {
 	let number = 100;
 	const qsParam = event['queryStringParameters'] || {};
@@ -17,9 +15,7 @@ exports.handler = async (event) => {
 		}
 	}
 	const data = FizzBuzz.createFizzBuzzData(number);
-	// for (let i = 1; i <= number; i++) {
-	// 	data.push(i.toString());
-	// }
+
 	const returnObj = {
 		data,
 		number,
